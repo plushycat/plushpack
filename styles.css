@@ -9,6 +9,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-image: url('https://images3.alphacoders.com/118/1184187.jpg');
+    background-image: absolute;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
