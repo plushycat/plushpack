@@ -85,9 +85,13 @@ footer {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
-    body {
-        background-attachment: scroll; 
+@media (max-width: 1080px) {
+    body { 
+        background-image: url('https://images3.alphacoders.com/118/1184187.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;         
     }
 
     header {
