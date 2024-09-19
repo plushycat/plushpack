@@ -1,8 +1,8 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%; /* Ensure both html and body cover the full height */
-    width: 100%; /* Ensure both html and body cover the full width */
+    height: 100%;
+    width: 100%;
 }
 
 body {
@@ -12,7 +12,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed; /* Fixed background for larger screens */
+    background-attachment: fixed;
     height: 100vh;
 }
 
@@ -23,7 +23,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Ensure header items wrap on smaller screens */
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -35,11 +35,11 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Keep list items horizontal */
+    display: flex;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 1rem; /* Use rem for better scaling */
 }
 
 nav ul li a {
@@ -48,15 +48,18 @@ nav ul li a {
 }
 
 main {
-    padding: 20px;
-    margin-bottom: 60px; /* Ensure there's space for the footer */
+    padding: 2rem; /* Use rem for scaling */
+    margin-bottom: 60px;
+    max-width: 1200px; /* Limit the width on larger screens */
+    margin-left: auto; /* Center the main content */
+    margin-right: auto;
 }
 
 .featured-content {
     display: flex;
     gap: 20px;
     margin-top: 20px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 .show {
@@ -70,7 +73,7 @@ main {
 }
 
 mark {
-    background-color: #bde6ad; /* Highlight color */
+    background-color: #bde6ad;
 }
 
 footer {
@@ -86,55 +89,55 @@ footer {
 /* Responsive Styles */
 @media (max-width: 768px) {
     body {
-        background-attachment: scroll; /* Adjust background for smaller screens */
+        background-attachment: scroll;
     }
-    
+
     header {
-        padding: 0.5rem; /* Adjust padding for smaller screens */
-        flex-direction: column; /* Stack header items vertically on smaller screens */
-        text-align: center; /* Center align header text */
+        padding: 0.5rem;
+        flex-direction: column;
+        text-align: center;
     }
 
     .logo {
-        font-size: 1.2rem; /* Adjust logo font size */
+        font-size: 1.2rem;
     }
 
     nav ul {
-        flex-direction: column; /* Stack navigation items vertically */
+        flex-direction: column;
     }
 
     nav ul li {
-        margin: 5px 0; /* Adjust margin for better spacing */
+        margin: 0.5rem 0; /* Use rem for better spacing */
     }
 
     .featured-content {
-        flex-direction: column; /* Stack featured content items vertically */
-        gap: 10px; /* Adjust gap for smaller screens */
+        flex-direction: column;
+        gap: 10px;
     }
 
     .show img {
-        width: 100px; /* Adjust image size for smaller screens */
+        width: 100px;
     }
 }
 
 @media (max-width: 480px) {
     header {
-        padding: 0.25rem; /* Further reduce padding for very small screens */
+        padding: 0.25rem;
     }
 
     .logo {
-        font-size: 1rem; /* Adjust font size */
+        font-size: 1rem;
     }
 
     nav ul {
-        flex-direction: column; /* Stack navigation items vertically */
+        flex-direction: column;
     }
 
     nav ul li {
-        margin: 5px 0; /* Adjust margin for better spacing */
+        margin: 0.5rem 0; /* Use rem for better spacing */
     }
 
     .show img {
-        width: 80px; /* Adjust image size for very small screens */
+        width: 80px;
     }
 }
