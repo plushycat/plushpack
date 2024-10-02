@@ -1,2 +1,3 @@
 # plushpack
-The website for plushycat's resource pack and other downloadable resources.
+- The repository containing the source code for plushycat's Resource Hub.
+- Website: https://plushycat.github.io/plushpack/
