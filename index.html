@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Minecraftia&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-
 </head>
 <body class="home">
     <header>
-        <h1>plushycat's Resource Hub</h1>
+        <h1 class="hl1">plushycat's Resource Hub</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -23,16 +22,33 @@
 
     <main>
         <section>
-            <h2 class = "hl2">Welcome!</h2> <br> <br>
-            <p class = "hl3">This website is still WIP, let me cook!</p> <br> <br>
-            <p class = "hl3">
-                Head over to Downloads, and try my Minecraft Resource Pack!<br> <br>
-                More resources will be available soon!</p> <br>
+            <h2 class="hl2">- Welcome! -</h2><br><br>
+            <p class="hl3">This website is still WIP, let me cook!</p><br><br>
+            <p class="hl3">
+                Head over to Downloads, and try my Minecraft Resource Pack!<br><br>
+                More resources will be available soon!
+            </p><br><br><br>
+            <!-- Spoiler button and hidden image -->
+            <button id="spoiler-btn">Wanna see something cool?</button><br><br>
+            <div id="spoiler-content" class="spoiler-content">
+                <img src="https://media1.tenor.com/m/x8v1oNUOmg4AAAAd/rickroll-roll.gif" alt="Spoiler Image" style="width: 25%; height: auto;">
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 plushycat's Resource Hub. All Rights Reserved.</p>
     </footer>
+    <script>
+        // JavaScript to toggle spoiler visibility
+        document.getElementById('spoiler-btn').addEventListener('click', function() {
+            var content = document.getElementById('spoiler-content');
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+            } else {
+                content.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>

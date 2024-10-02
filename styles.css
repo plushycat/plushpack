@@ -77,7 +77,7 @@ ul li.custom {
 }
 
 .hl1 {
-    background-color: rgba(244, 167, 104, 0.7); /* Light yellow highlight with transparency */
+    background-color: rgba(5, 7, 2, 0.7); /* highlight with transparency */
     padding: 0 1%; /* Only horizontal padding to keep it close to the text */
     border-radius: 3px; 
     display: inline;
@@ -89,7 +89,7 @@ ul li.custom {
 }
 
 .hl3 {
-    background-color: rgba(231, 228, 228, 0.7);
+    background-color: rgba(255, 222, 222, 0.7);
     display: inline;
 }
 
@@ -165,6 +165,26 @@ a {
 a:hover {
     color: #3d3fe4; /* blue on hover */
 }
+
+.spoiler-content {
+    display: none; /* Initially hide the image */
+}
+
+#spoiler-btn {
+    background-color: #040306; /* Change this to your desired background color */
+    color: white; /* Change this to your desired text color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 100px; /* Optional: Adds rounded corners */
+}
+
+#spoiler-btn:hover {
+    background-color: #35d780; /* Color when the button is hovered */
+    color: #333; /* Text color when hovered */
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
