@@ -1,150 +1,175 @@
+/* General Styles */
 html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    height: 100%;
+    font-family: 'Minecraftia', sans-serif;
+    color: #000000; /* Default text color */
+    text-align: center;
     display: flex;
-    flex-direction: column; /* Set body to a column layout */
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-image: url('https://images3.alphacoders.com/118/1184187.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: scroll; 
+    flex-direction: column;
 }
 
 header {
-    background: #000;
+    background-color: rgba(48, 78, 48, 0.85); /* Pastel green header with transparency */
+    padding: 20px;
     color: #fff;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+footer {
+    background-color: rgba(53, 41, 28, 0.85); /* Pastel brown footer with transparency */
+    padding: 20px;
+    color: #fff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
-    display: flex;
 }
 
 nav ul li {
-    margin: 0 1rem; 
+    display: inline;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #aa8af6; /* White text for links */
     text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    color: #69dc9e; /* Lighter pastel green on hover */
 }
 
 main {
-    padding: 2rem; 
-    flex: 1; /* Allow main to take up available space */
-    max-width: 1200px; 
-    margin-left: auto; 
-    margin-right: auto;
+    flex: 1; /* Expands to push footer to the bottom */
+    padding: 20px;
+    /* Removed background color to prevent white overlay */
 }
 
-.featured-content {
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
-    flex-wrap: wrap;
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
-.show {
-    text-align: center;
-    box-sizing: border-box;
+section p, section ul {
+    font-size: 1.2em;
 }
 
-.show img {
-    width: 150px;
-    height: auto;
+/* Custom Bullet Points */
+ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 0; /* No padding on the left for the ul */
 }
 
-mark {
-    background-color: #bde6ad;
+ul li.custom {
+    background-image: url('assets/dl.png'); /* Path to your custom bullet image */
+    background-repeat: no-repeat;
+    background-position: 0 100%; /* Center the bullet vertically */
+    padding-left: 10px; /* Space between the bullet and text */
+    margin: 30px 0; /* Adjust vertical spacing */
+}
+
+.hl1 {
+    background-color: rgba(244, 167, 104, 0.7); /* Light yellow highlight with transparency */
+    padding: 0 1%; /* Only horizontal padding to keep it close to the text */
+    border-radius: 3px; 
+    display: inline;
+}
+
+.hl2 {
+    background-color: rgba(255, 91, 91, 0.7);
+    display: inline;
+}
+
+.hl3 {
+    background-color: rgba(231, 228, 228, 0.7);
+    display: inline;
+}
+
+.ig, .twt, .mail {
+    background-repeat: no-repeat;
+    background-position: left center; /* Align icon vertically centered on the left */
+    padding-left: 35px; /* Adjust space between icon and text */
+    display: inline-block;
+    vertical-align: middle; /* Align text and icon in the middle */
+    background-size: 40px 40px; /* Adjust icon size */
+    line-height: 2.5; /* Ensure enough space for the icon */
+}
+
+.ig {
+    background-image: url('assets/ig.png'); /* Path to Instagram icon */
+    background-color: rgba(255, 232, 102, 0.7);
+}
+
+.twt {
+    background-image: url('assets/twt.png'); /* Path to Twitter icon */
+    background-color: rgba(255, 232, 102, 0.7);
+}
+
+.mail {
+    background-image: url('assets/mail.png'); /* Path to Mail icon */
+    background-color: rgba(255, 232, 102, 0.7);
 }
 
 footer {
-    text-align: center;
-    padding: 1rem 0;
-    background: #000;
-    color: #fff;
+    padding: 20px;
+    font-size: 1em;
+    position: relative;
+    bottom: 0;
     width: 100%;
+    text-align: center;
 }
 
-/* Responsive Styles */
-@media (max-width: 1080px) {
-    body { 
-        background-image: url('https://images3.alphacoders.com/118/1184187.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;         
-    }
-
-    header {
-        padding: 0.5rem;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .logo {
-        font-size: 1.2rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 0.5rem 0; 
-    }
-
-    .featured-content {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .show img {
-        width: 100px;
-    }
-
-    footer {
-        position: relative; /* Make sure footer sticks to the bottom without overlap */
-        margin-top: auto; /* This ensures the footer is pushed down */
-    }
+/* Different Background Images for Each Page */
+body.home {
+    background: url('assets/home-background.png') no-repeat center center fixed; /* Home page background */
+    background-size: cover;
 }
 
-@media (max-width: 480px) {
-    header {
-        padding: 0.25rem;
-    }
+body.download {
+    background: url('assets/dl-background.png') no-repeat center center fixed; /* Downloads page background */
+    background-size: cover;
+}
 
-    .logo {
-        font-size: 1rem;
-    }
+body.contact {
+    background: url('assets/contact-background.png') no-repeat center center fixed; /* Contact page background */
+    background-size: cover;
+}
 
-    nav ul {
-        flex-direction: column;
-    }
+/* Buttons and Links */
+button {
+    background-color: #b388eb; /* Pastel purple button */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
 
+button:hover {
+    background-color: #d7fbe8; /* Lighter pastel green on hover */
+}
+
+a {
+    color: #080606; /* Neutral black for links */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3d3fe4; /* blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     nav ul li {
-        margin: 0.5rem 0; 
-    }
-
-    .show img {
-        width: 80px;
+        display: block;
+        margin: 10px 0;
     }
 }
