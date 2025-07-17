@@ -220,3 +220,42 @@ a:hover {
         margin: 10px 0;
     }
 }
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    header, main, footer, section {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    h1.hl1, h2.hl2, p.hl3 {
+        font-size: 1.2em;
+        word-break: break-word;
+    }
+    ul {
+        padding-left: 0;
+    }
+    ul li {
+        margin-bottom: 10px;
+        font-size: 1em;
+    }
+    .twt, .ig, .mail {
+        display: block;
+        width: 100%;
+    }
+    pre {
+        white-space: normal;
+        font-family: inherit;
+        margin: 0;
+        padding: 0;
+        background: none;
+        border: none;
+    }
+}
